@@ -78,6 +78,25 @@
 		5FF7D70F1C8149E6002157DB /* volume.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7021C8149E6002157DB /* volume.c */; };
 		5FF7D7101C8149E6002157DB /* xattr.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7031C8149E6002157DB /* xattr.c */; };
 		5FF7D7131C815BD6002157DB /* CBImageExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7121C815BD6002157DB /* CBImageExtractor.m */; };
+		5FF7D75C1C81ED59002157DB /* attributes.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7151C81ED59002157DB /* attributes.cc */; };
+		5FF7D75E1C81ED59002157DB /* basicmbr.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7181C81ED59002157DB /* basicmbr.cc */; };
+		5FF7D7601C81ED59002157DB /* bsd.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D71B1C81ED59002157DB /* bsd.cc */; };
+		5FF7D7661C81ED59002157DB /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D7221C81ED59002157DB /* COPYING */; };
+		5FF7D7671C81ED59002157DB /* crc32.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7231C81ED59002157DB /* crc32.cc */; };
+		5FF7D76A1C81ED59002157DB /* diskio-unix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7271C81ED59002157DB /* diskio-unix.cc */; };
+		5FF7D76D1C81ED59002157DB /* diskio.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D72A1C81ED59002157DB /* diskio.cc */; };
+		5FF7D7731C81ED59002157DB /* gdisk.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7311C81ED59002157DB /* gdisk.cc */; };
+		5FF7D7771C81ED59002157DB /* gpt.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7351C81ED59002157DB /* gpt.cc */; };
+		5FF7D7791C81ED59002157DB /* gptcl.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7381C81ED59002157DB /* gptcl.cc */; };
+		5FF7D77A1C81ED59002157DB /* gptcurses.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D73A1C81ED59002157DB /* gptcurses.cc */; };
+		5FF7D77C1C81ED59002157DB /* gptpart.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D73D1C81ED59002157DB /* gptpart.cc */; };
+		5FF7D77E1C81ED59002157DB /* gpttext.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7401C81ED59002157DB /* gpttext.cc */; };
+		5FF7D7801C81ED59002157DB /* guid.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7431C81ED59002157DB /* guid.cc */; };
+		5FF7D7871C81ED59002157DB /* mbr.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D74B1C81ED59002157DB /* mbr.cc */; };
+		5FF7D7891C81ED59002157DB /* mbrpart.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D74E1C81ED59002157DB /* mbrpart.cc */; };
+		5FF7D78C1C81ED59002157DB /* parttypes.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7521C81ED59002157DB /* parttypes.cc */; };
+		5FF7D7921C81ED59002157DB /* support.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7591C81ED59002157DB /* support.cc */; };
+		5FF7D7951C81EED8002157DB /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF7D7941C81EED8002157DB /* libncurses.5.4.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -291,6 +310,40 @@
 		5FF7D7031C8149E6002157DB /* xattr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xattr.c; sourceTree = "<group>"; };
 		5FF7D7111C815BD6002157DB /* CBImageExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBImageExtractor.h; sourceTree = "<group>"; };
 		5FF7D7121C815BD6002157DB /* CBImageExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBImageExtractor.m; sourceTree = "<group>"; };
+		5FF7D7151C81ED59002157DB /* attributes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = attributes.cc; sourceTree = "<group>"; };
+		5FF7D7161C81ED59002157DB /* attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attributes.h; sourceTree = "<group>"; };
+		5FF7D7181C81ED59002157DB /* basicmbr.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = basicmbr.cc; sourceTree = "<group>"; };
+		5FF7D7191C81ED59002157DB /* basicmbr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basicmbr.h; sourceTree = "<group>"; };
+		5FF7D71B1C81ED59002157DB /* bsd.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bsd.cc; sourceTree = "<group>"; };
+		5FF7D71C1C81ED59002157DB /* bsd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bsd.h; sourceTree = "<group>"; };
+		5FF7D7221C81ED59002157DB /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		5FF7D7231C81ED59002157DB /* crc32.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crc32.cc; sourceTree = "<group>"; };
+		5FF7D7241C81ED59002157DB /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
+		5FF7D7271C81ED59002157DB /* diskio-unix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "diskio-unix.cc"; sourceTree = "<group>"; };
+		5FF7D72A1C81ED59002157DB /* diskio.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diskio.cc; sourceTree = "<group>"; };
+		5FF7D72B1C81ED59002157DB /* diskio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diskio.h; sourceTree = "<group>"; };
+		5FF7D7311C81ED59002157DB /* gdisk.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gdisk.cc; sourceTree = "<group>"; };
+		5FF7D7351C81ED59002157DB /* gpt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gpt.cc; sourceTree = "<group>"; };
+		5FF7D7361C81ED59002157DB /* gpt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpt.h; sourceTree = "<group>"; };
+		5FF7D7381C81ED59002157DB /* gptcl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gptcl.cc; sourceTree = "<group>"; };
+		5FF7D7391C81ED59002157DB /* gptcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gptcl.h; sourceTree = "<group>"; };
+		5FF7D73A1C81ED59002157DB /* gptcurses.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gptcurses.cc; sourceTree = "<group>"; };
+		5FF7D73B1C81ED59002157DB /* gptcurses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gptcurses.h; sourceTree = "<group>"; };
+		5FF7D73D1C81ED59002157DB /* gptpart.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gptpart.cc; sourceTree = "<group>"; };
+		5FF7D73E1C81ED59002157DB /* gptpart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gptpart.h; sourceTree = "<group>"; };
+		5FF7D7401C81ED59002157DB /* gpttext.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gpttext.cc; sourceTree = "<group>"; };
+		5FF7D7411C81ED59002157DB /* gpttext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpttext.h; sourceTree = "<group>"; };
+		5FF7D7431C81ED59002157DB /* guid.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guid.cc; sourceTree = "<group>"; };
+		5FF7D7441C81ED59002157DB /* guid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guid.h; sourceTree = "<group>"; };
+		5FF7D74B1C81ED59002157DB /* mbr.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mbr.cc; sourceTree = "<group>"; };
+		5FF7D74C1C81ED59002157DB /* mbr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbr.h; sourceTree = "<group>"; };
+		5FF7D74E1C81ED59002157DB /* mbrpart.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mbrpart.cc; sourceTree = "<group>"; };
+		5FF7D74F1C81ED59002157DB /* mbrpart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbrpart.h; sourceTree = "<group>"; };
+		5FF7D7521C81ED59002157DB /* parttypes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parttypes.cc; sourceTree = "<group>"; };
+		5FF7D7531C81ED59002157DB /* parttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parttypes.h; sourceTree = "<group>"; };
+		5FF7D7591C81ED59002157DB /* support.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = support.cc; sourceTree = "<group>"; };
+		5FF7D75A1C81ED59002157DB /* support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
+		5FF7D7941C81EED8002157DB /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +351,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF7D7951C81EED8002157DB /* libncurses.5.4.tbd in Frameworks */,
 				5FF7D6D71C810E51002157DB /* libbz2.1.0.tbd in Frameworks */,
 				5FF7D6831C80D103002157DB /* libssl.a in Frameworks */,
 				5FF7D67E1C80CA98002157DB /* liblzma.tbd in Frameworks */,
@@ -312,6 +366,7 @@
 		5FF7D5B21C80A75A002157DB = {
 			isa = PBXGroup;
 			children = (
+				5FF7D7941C81EED8002157DB /* libncurses.5.4.tbd */,
 				5FF7D6D61C810E51002157DB /* libbz2.1.0.tbd */,
 				5FF7D6D41C810E38002157DB /* libbz2.tbd */,
 				5FF7D67D1C80CA98002157DB /* liblzma.tbd */,
@@ -332,6 +387,7 @@
 		5FF7D5BD1C80A75A002157DB /* coolbooter */ = {
 			isa = PBXGroup;
 			children = (
+				5FF7D7141C81ED59002157DB /* gptfdisk */,
 				5FF7D6D81C8148B5002157DB /* dmg */,
 				5FF7D67F1C80D103002157DB /* libssl */,
 				5FF7D6CD1C80EB9D002157DB /* bspatch */,
@@ -645,6 +701,46 @@
 			path = hfs;
 			sourceTree = "<group>";
 		};
+		5FF7D7141C81ED59002157DB /* gptfdisk */ = {
+			isa = PBXGroup;
+			children = (
+				5FF7D7151C81ED59002157DB /* attributes.cc */,
+				5FF7D7161C81ED59002157DB /* attributes.h */,
+				5FF7D7181C81ED59002157DB /* basicmbr.cc */,
+				5FF7D7191C81ED59002157DB /* basicmbr.h */,
+				5FF7D71B1C81ED59002157DB /* bsd.cc */,
+				5FF7D71C1C81ED59002157DB /* bsd.h */,
+				5FF7D7221C81ED59002157DB /* COPYING */,
+				5FF7D7231C81ED59002157DB /* crc32.cc */,
+				5FF7D7241C81ED59002157DB /* crc32.h */,
+				5FF7D7271C81ED59002157DB /* diskio-unix.cc */,
+				5FF7D72A1C81ED59002157DB /* diskio.cc */,
+				5FF7D72B1C81ED59002157DB /* diskio.h */,
+				5FF7D7311C81ED59002157DB /* gdisk.cc */,
+				5FF7D7351C81ED59002157DB /* gpt.cc */,
+				5FF7D7361C81ED59002157DB /* gpt.h */,
+				5FF7D7381C81ED59002157DB /* gptcl.cc */,
+				5FF7D7391C81ED59002157DB /* gptcl.h */,
+				5FF7D73A1C81ED59002157DB /* gptcurses.cc */,
+				5FF7D73B1C81ED59002157DB /* gptcurses.h */,
+				5FF7D73D1C81ED59002157DB /* gptpart.cc */,
+				5FF7D73E1C81ED59002157DB /* gptpart.h */,
+				5FF7D7401C81ED59002157DB /* gpttext.cc */,
+				5FF7D7411C81ED59002157DB /* gpttext.h */,
+				5FF7D7431C81ED59002157DB /* guid.cc */,
+				5FF7D7441C81ED59002157DB /* guid.h */,
+				5FF7D74B1C81ED59002157DB /* mbr.cc */,
+				5FF7D74C1C81ED59002157DB /* mbr.h */,
+				5FF7D74E1C81ED59002157DB /* mbrpart.cc */,
+				5FF7D74F1C81ED59002157DB /* mbrpart.h */,
+				5FF7D7521C81ED59002157DB /* parttypes.cc */,
+				5FF7D7531C81ED59002157DB /* parttypes.h */,
+				5FF7D7591C81ED59002157DB /* support.cc */,
+				5FF7D75A1C81ED59002157DB /* support.h */,
+			);
+			path = gptfdisk;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -703,6 +799,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF7D7661C81ED59002157DB /* COPYING in Resources */,
 				5FF7D6E91C8148B5002157DB /* CMakeLists.txt in Resources */,
 				5FF7D5CE1C80A75A002157DB /* LaunchScreen.storyboard in Resources */,
 				5FF7D5CB1C80A75A002157DB /* Assets.xcassets in Resources */,
@@ -722,15 +819,22 @@
 				5FF7D60E1C80A99C002157DB /* AFURLConnectionOperation.m in Sources */,
 				5FF7D6F01C8148B5002157DB /* resources.c in Sources */,
 				5FF7D6EC1C8148B5002157DB /* dmglib.c in Sources */,
+				5FF7D7871C81ED59002157DB /* mbr.cc in Sources */,
+				5FF7D76D1C81ED59002157DB /* diskio.cc in Sources */,
+				5FF7D77E1C81ED59002157DB /* gpttext.cc in Sources */,
 				5FF7D6751C80C800002157DB /* libxpwn.c in Sources */,
+				5FF7D7671C81ED59002157DB /* crc32.cc in Sources */,
 				5FF7D6401C80B51B002157DB /* fileenc.c in Sources */,
+				5FF7D75E1C81ED59002157DB /* basicmbr.cc in Sources */,
 				5FF7D6EB1C8148B5002157DB /* dmgfile.c in Sources */,
 				5FF7D67A1C80C800002157DB /* nor_files.c in Sources */,
+				5FF7D75C1C81ED59002157DB /* attributes.cc in Sources */,
 				5FF7D6091C80A99C002157DB /* AFHTTPRequestOperation.m in Sources */,
 				5FF7D70C1C8149E6002157DB /* hfslib.c in Sources */,
 				5FF7D7071C8149E6002157DB /* extents.c in Sources */,
 				5FF7D6EA1C8148B5002157DB /* dmg.c in Sources */,
 				5FF7D6481C80B51B002157DB /* unzip.c in Sources */,
+				5FF7D7731C81ED59002157DB /* gdisk.cc in Sources */,
 				5FF7D60C1C80A99C002157DB /* AFNetworkReachabilityManager.m in Sources */,
 				5FF7D6111C80A99C002157DB /* AFURLSessionManager.m in Sources */,
 				5FF7D67C1C80C800002157DB /* xpwntool.c in Sources */,
@@ -747,10 +851,12 @@
 				5FF7D6471C80B51B002157DB /* mztools.c in Sources */,
 				5FF7D6101C80A99C002157DB /* AFURLResponseSerialization.m in Sources */,
 				5FF7D6771C80C800002157DB /* lzss.c in Sources */,
+				5FF7D7771C81ED59002157DB /* gpt.cc in Sources */,
 				5FF7D64A1C80B51B002157DB /* SSZipArchive.m in Sources */,
 				5FF7D6491C80B51B002157DB /* zip.c in Sources */,
 				5FF7D6ED1C8148B5002157DB /* filevault.c in Sources */,
 				5FF7D7081C8149E6002157DB /* fastunicodecompare.c in Sources */,
+				5FF7D77C1C81ED59002157DB /* gptpart.cc in Sources */,
 				5FF7D7091C8149E6002157DB /* flatfile.c in Sources */,
 				5FF7D6EE1C8148B5002157DB /* io.c in Sources */,
 				5FF7D5C01C80A75A002157DB /* main.m in Sources */,
@@ -759,25 +865,33 @@
 				5FF7D63E1C80B51B002157DB /* aestab.c in Sources */,
 				5FF7D6711C80C800002157DB /* abstractfile.c in Sources */,
 				5FF7D6731C80C800002157DB /* img2.c in Sources */,
+				5FF7D7891C81ED59002157DB /* mbrpart.cc in Sources */,
 				5FF7D6431C80B51B002157DB /* pwd2key.c in Sources */,
 				5FF7D7041C8149E6002157DB /* btree.c in Sources */,
 				5FF7D6CC1C80D4CF002157DB /* CBImageDecrypter.m in Sources */,
 				5FF7D6421C80B51B002157DB /* prng.c in Sources */,
 				5FF7D5DD1C80A782002157DB /* CBAppDelegate.m in Sources */,
 				5FF7D60A1C80A99C002157DB /* AFHTTPRequestOperationManager.m in Sources */,
+				5FF7D77A1C81ED59002157DB /* gptcurses.cc in Sources */,
 				5FF7D6E81C8148B5002157DB /* checksum.c in Sources */,
 				5FF7D7101C8149E6002157DB /* xattr.c in Sources */,
+				5FF7D7601C81ED59002157DB /* bsd.cc in Sources */,
 				5FF7D60D1C80A99C002157DB /* AFSecurityPolicy.m in Sources */,
 				5FF7D6781C80C800002157DB /* lzssfile.c in Sources */,
+				5FF7D7801C81ED59002157DB /* guid.cc in Sources */,
 				5FF7D63D1C80B51B002157DB /* aeskey.c in Sources */,
 				5FF7D7051C8149E6002157DB /* catalog.c in Sources */,
 				5FF7D6461C80B51B002157DB /* ioapi.c in Sources */,
 				5FF7D6EF1C8148B5002157DB /* partition.c in Sources */,
 				5FF7D6441C80B51B002157DB /* sha1.c in Sources */,
+				5FF7D78C1C81ED59002157DB /* parttypes.cc in Sources */,
+				5FF7D7921C81ED59002157DB /* support.cc in Sources */,
 				5FF7D70B1C8149E6002157DB /* hfscompress.c in Sources */,
 				5FF7D5DF1C80A782002157DB /* CBFirmwareDownloader.m in Sources */,
+				5FF7D76A1C81ED59002157DB /* diskio-unix.cc in Sources */,
 				5FF7D5DE1C80A782002157DB /* CBDeviceInfo.m in Sources */,
 				5FF7D63C1C80B51B002157DB /* aescrypt.c in Sources */,
+				5FF7D7791C81ED59002157DB /* gptcl.cc in Sources */,
 				5FF7D60B1C80A99C002157DB /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

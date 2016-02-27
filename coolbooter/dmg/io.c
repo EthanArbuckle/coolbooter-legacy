@@ -316,7 +316,6 @@ void extractBLKX(AbstractFile* in, AbstractFile* out, BLKXTable* blkx) {
 			continue;
 		}
 		
-		printf("run %d: start=%" PRId64 " sectors=%" PRId64 ", length=%" PRId64 ", fileOffset=0x%" PRIx64 "\n", i, initialOffset + (blkx->runs[i].sectorStart * SECTOR_SIZE), blkx->runs[i].sectorCount, blkx->runs[i].compLength, blkx->runs[i].compOffset);
 		
 		switch(blkx->runs[i].type) {
 			case BLOCK_ZLIB:

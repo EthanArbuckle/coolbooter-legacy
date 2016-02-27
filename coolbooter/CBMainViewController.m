@@ -58,7 +58,7 @@
 
 #pragma mark - unzipping
 - (void)beginUnzippingFirmware {
-    [self unzipOperationFinished];return;
+
     if (![[NSFileManager defaultManager] fileExistsAtPath:@"/Users/ethanarbuckle/Desktop/firmware_stuff/stock_firmware.zip"]) {
         
         NSLog(@"firmware file doesnt exist");

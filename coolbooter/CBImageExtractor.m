@@ -24,7 +24,9 @@
     filein = createAbstractFileFromFileVault(filein, [key UTF8String]);
 
     extractDmg(filein, fileout, -1);
-
+    
+    NSLog(@"finished writing %@", outFile);
+    
 }
 
 @end
