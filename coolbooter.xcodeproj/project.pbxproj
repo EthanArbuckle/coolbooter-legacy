@@ -54,6 +54,29 @@
 		5FF7D6CC1C80D4CF002157DB /* CBImageDecrypter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6CB1C80D4CF002157DB /* CBImageDecrypter.m */; };
 		5FF7D6D31C80EFA5002157DB /* CBImagePatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6D21C80EFA5002157DB /* CBImagePatcher.m */; };
 		5FF7D6D71C810E51002157DB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF7D6D61C810E51002157DB /* libbz2.1.0.tbd */; };
+		5FF7D6E81C8148B5002157DB /* checksum.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6D91C8148B5002157DB /* checksum.c */; };
+		5FF7D6E91C8148B5002157DB /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D6DA1C8148B5002157DB /* CMakeLists.txt */; };
+		5FF7D6EA1C8148B5002157DB /* dmg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6DB1C8148B5002157DB /* dmg.c */; };
+		5FF7D6EB1C8148B5002157DB /* dmgfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6DD1C8148B5002157DB /* dmgfile.c */; };
+		5FF7D6EC1C8148B5002157DB /* dmglib.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6DF1C8148B5002157DB /* dmglib.c */; };
+		5FF7D6ED1C8148B5002157DB /* filevault.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6E11C8148B5002157DB /* filevault.c */; };
+		5FF7D6EE1C8148B5002157DB /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6E31C8148B5002157DB /* io.c */; };
+		5FF7D6EF1C8148B5002157DB /* partition.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6E41C8148B5002157DB /* partition.c */; };
+		5FF7D6F01C8148B5002157DB /* resources.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6E51C8148B5002157DB /* resources.c */; };
+		5FF7D6F11C8148B5002157DB /* udif.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6E61C8148B5002157DB /* udif.c */; };
+		5FF7D7041C8149E6002157DB /* btree.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F41C8149E6002157DB /* btree.c */; };
+		5FF7D7051C8149E6002157DB /* catalog.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F51C8149E6002157DB /* catalog.c */; };
+		5FF7D7061C8149E6002157DB /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F61C8149E6002157DB /* CMakeLists.txt */; };
+		5FF7D7071C8149E6002157DB /* extents.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F71C8149E6002157DB /* extents.c */; };
+		5FF7D7081C8149E6002157DB /* fastunicodecompare.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F81C8149E6002157DB /* fastunicodecompare.c */; };
+		5FF7D7091C8149E6002157DB /* flatfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6F91C8149E6002157DB /* flatfile.c */; };
+		5FF7D70A1C8149E6002157DB /* hfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6FA1C8149E6002157DB /* hfs.c */; };
+		5FF7D70B1C8149E6002157DB /* hfscompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6FB1C8149E6002157DB /* hfscompress.c */; };
+		5FF7D70C1C8149E6002157DB /* hfslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D6FD1C8149E6002157DB /* hfslib.c */; };
+		5FF7D70D1C8149E6002157DB /* rawfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7001C8149E6002157DB /* rawfile.c */; };
+		5FF7D70E1C8149E6002157DB /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7011C8149E6002157DB /* utility.c */; };
+		5FF7D70F1C8149E6002157DB /* volume.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7021C8149E6002157DB /* volume.c */; };
+		5FF7D7101C8149E6002157DB /* xattr.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7031C8149E6002157DB /* xattr.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,6 +258,36 @@
 		5FF7D6D21C80EFA5002157DB /* CBImagePatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBImagePatcher.m; sourceTree = "<group>"; };
 		5FF7D6D41C810E38002157DB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		5FF7D6D61C810E51002157DB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		5FF7D6D91C8148B5002157DB /* checksum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = checksum.c; sourceTree = "<group>"; };
+		5FF7D6DA1C8148B5002157DB /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		5FF7D6DB1C8148B5002157DB /* dmg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dmg.c; sourceTree = "<group>"; };
+		5FF7D6DC1C8148B5002157DB /* dmg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dmg.h; sourceTree = "<group>"; };
+		5FF7D6DD1C8148B5002157DB /* dmgfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dmgfile.c; sourceTree = "<group>"; };
+		5FF7D6DE1C8148B5002157DB /* dmgfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dmgfile.h; sourceTree = "<group>"; };
+		5FF7D6DF1C8148B5002157DB /* dmglib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dmglib.c; sourceTree = "<group>"; };
+		5FF7D6E01C8148B5002157DB /* dmglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dmglib.h; sourceTree = "<group>"; };
+		5FF7D6E11C8148B5002157DB /* filevault.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filevault.c; sourceTree = "<group>"; };
+		5FF7D6E21C8148B5002157DB /* filevault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filevault.h; sourceTree = "<group>"; };
+		5FF7D6E31C8148B5002157DB /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		5FF7D6E41C8148B5002157DB /* partition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = partition.c; sourceTree = "<group>"; };
+		5FF7D6E51C8148B5002157DB /* resources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = resources.c; sourceTree = "<group>"; };
+		5FF7D6E61C8148B5002157DB /* udif.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = udif.c; sourceTree = "<group>"; };
+		5FF7D6F41C8149E6002157DB /* btree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = btree.c; sourceTree = "<group>"; };
+		5FF7D6F51C8149E6002157DB /* catalog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = catalog.c; sourceTree = "<group>"; };
+		5FF7D6F61C8149E6002157DB /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		5FF7D6F71C8149E6002157DB /* extents.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = extents.c; sourceTree = "<group>"; };
+		5FF7D6F81C8149E6002157DB /* fastunicodecompare.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fastunicodecompare.c; sourceTree = "<group>"; };
+		5FF7D6F91C8149E6002157DB /* flatfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flatfile.c; sourceTree = "<group>"; };
+		5FF7D6FA1C8149E6002157DB /* hfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hfs.c; sourceTree = "<group>"; };
+		5FF7D6FB1C8149E6002157DB /* hfscompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hfscompress.c; sourceTree = "<group>"; };
+		5FF7D6FC1C8149E6002157DB /* hfscompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hfscompress.h; sourceTree = "<group>"; };
+		5FF7D6FD1C8149E6002157DB /* hfslib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hfslib.c; sourceTree = "<group>"; };
+		5FF7D6FE1C8149E6002157DB /* hfslib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hfslib.h; sourceTree = "<group>"; };
+		5FF7D6FF1C8149E6002157DB /* hfsplus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hfsplus.h; sourceTree = "<group>"; };
+		5FF7D7001C8149E6002157DB /* rawfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rawfile.c; sourceTree = "<group>"; };
+		5FF7D7011C8149E6002157DB /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		5FF7D7021C8149E6002157DB /* volume.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = volume.c; sourceTree = "<group>"; };
+		5FF7D7031C8149E6002157DB /* xattr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xattr.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +329,7 @@
 		5FF7D5BD1C80A75A002157DB /* coolbooter */ = {
 			isa = PBXGroup;
 			children = (
+				5FF7D6D81C8148B5002157DB /* dmg */,
 				5FF7D67F1C80D103002157DB /* libssl */,
 				5FF7D6CD1C80EB9D002157DB /* bspatch */,
 				5FF7D64D1C80C800002157DB /* xpwn */,
@@ -541,6 +595,51 @@
 			path = bspatch;
 			sourceTree = "<group>";
 		};
+		5FF7D6D81C8148B5002157DB /* dmg */ = {
+			isa = PBXGroup;
+			children = (
+				5FF7D6F31C8149E6002157DB /* hfs */,
+				5FF7D6D91C8148B5002157DB /* checksum.c */,
+				5FF7D6DA1C8148B5002157DB /* CMakeLists.txt */,
+				5FF7D6DB1C8148B5002157DB /* dmg.c */,
+				5FF7D6DC1C8148B5002157DB /* dmg.h */,
+				5FF7D6DD1C8148B5002157DB /* dmgfile.c */,
+				5FF7D6DE1C8148B5002157DB /* dmgfile.h */,
+				5FF7D6DF1C8148B5002157DB /* dmglib.c */,
+				5FF7D6E01C8148B5002157DB /* dmglib.h */,
+				5FF7D6E11C8148B5002157DB /* filevault.c */,
+				5FF7D6E21C8148B5002157DB /* filevault.h */,
+				5FF7D6E31C8148B5002157DB /* io.c */,
+				5FF7D6E41C8148B5002157DB /* partition.c */,
+				5FF7D6E51C8148B5002157DB /* resources.c */,
+				5FF7D6E61C8148B5002157DB /* udif.c */,
+			);
+			path = dmg;
+			sourceTree = "<group>";
+		};
+		5FF7D6F31C8149E6002157DB /* hfs */ = {
+			isa = PBXGroup;
+			children = (
+				5FF7D6F41C8149E6002157DB /* btree.c */,
+				5FF7D6F51C8149E6002157DB /* catalog.c */,
+				5FF7D6F61C8149E6002157DB /* CMakeLists.txt */,
+				5FF7D6F71C8149E6002157DB /* extents.c */,
+				5FF7D6F81C8149E6002157DB /* fastunicodecompare.c */,
+				5FF7D6F91C8149E6002157DB /* flatfile.c */,
+				5FF7D6FA1C8149E6002157DB /* hfs.c */,
+				5FF7D6FB1C8149E6002157DB /* hfscompress.c */,
+				5FF7D6FC1C8149E6002157DB /* hfscompress.h */,
+				5FF7D6FD1C8149E6002157DB /* hfslib.c */,
+				5FF7D6FE1C8149E6002157DB /* hfslib.h */,
+				5FF7D6FF1C8149E6002157DB /* hfsplus.h */,
+				5FF7D7001C8149E6002157DB /* rawfile.c */,
+				5FF7D7011C8149E6002157DB /* utility.c */,
+				5FF7D7021C8149E6002157DB /* volume.c */,
+				5FF7D7031C8149E6002157DB /* xattr.c */,
+			);
+			path = hfs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,9 +698,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF7D6E91C8148B5002157DB /* CMakeLists.txt in Resources */,
 				5FF7D5CE1C80A75A002157DB /* LaunchScreen.storyboard in Resources */,
 				5FF7D5CB1C80A75A002157DB /* Assets.xcassets in Resources */,
 				5FF7D6451C80B51B002157DB /* Info.plist in Resources */,
+				5FF7D7061C8149E6002157DB /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,18 +715,27 @@
 			files = (
 				5FF7D6411C80B51B002157DB /* hmac.c in Sources */,
 				5FF7D60E1C80A99C002157DB /* AFURLConnectionOperation.m in Sources */,
+				5FF7D6F01C8148B5002157DB /* resources.c in Sources */,
+				5FF7D6EC1C8148B5002157DB /* dmglib.c in Sources */,
 				5FF7D6751C80C800002157DB /* libxpwn.c in Sources */,
 				5FF7D6401C80B51B002157DB /* fileenc.c in Sources */,
+				5FF7D6EB1C8148B5002157DB /* dmgfile.c in Sources */,
 				5FF7D67A1C80C800002157DB /* nor_files.c in Sources */,
 				5FF7D6091C80A99C002157DB /* AFHTTPRequestOperation.m in Sources */,
+				5FF7D70C1C8149E6002157DB /* hfslib.c in Sources */,
+				5FF7D7071C8149E6002157DB /* extents.c in Sources */,
+				5FF7D6EA1C8148B5002157DB /* dmg.c in Sources */,
 				5FF7D6481C80B51B002157DB /* unzip.c in Sources */,
 				5FF7D60C1C80A99C002157DB /* AFNetworkReachabilityManager.m in Sources */,
 				5FF7D6111C80A99C002157DB /* AFURLSessionManager.m in Sources */,
 				5FF7D67C1C80C800002157DB /* xpwntool.c in Sources */,
 				5FF7D6D31C80EFA5002157DB /* CBImagePatcher.m in Sources */,
+				5FF7D6F11C8148B5002157DB /* udif.c in Sources */,
 				5FF7D6741C80C800002157DB /* img3.c in Sources */,
 				5FF7D60F1C80A99C002157DB /* AFURLRequestSerialization.m in Sources */,
 				5FF7D63F1C80B51B002157DB /* entropy.c in Sources */,
+				5FF7D70E1C8149E6002157DB /* utility.c in Sources */,
+				5FF7D70D1C8149E6002157DB /* rawfile.c in Sources */,
 				5FF7D5E01C80A782002157DB /* CBMainViewController.m in Sources */,
 				5FF7D6721C80C800002157DB /* base64.c in Sources */,
 				5FF7D6471C80B51B002157DB /* mztools.c in Sources */,
@@ -633,20 +743,32 @@
 				5FF7D6771C80C800002157DB /* lzss.c in Sources */,
 				5FF7D64A1C80B51B002157DB /* SSZipArchive.m in Sources */,
 				5FF7D6491C80B51B002157DB /* zip.c in Sources */,
+				5FF7D6ED1C8148B5002157DB /* filevault.c in Sources */,
+				5FF7D7081C8149E6002157DB /* fastunicodecompare.c in Sources */,
+				5FF7D7091C8149E6002157DB /* flatfile.c in Sources */,
+				5FF7D6EE1C8148B5002157DB /* io.c in Sources */,
 				5FF7D5C01C80A75A002157DB /* main.m in Sources */,
+				5FF7D70A1C8149E6002157DB /* hfs.c in Sources */,
+				5FF7D70F1C8149E6002157DB /* volume.c in Sources */,
 				5FF7D63E1C80B51B002157DB /* aestab.c in Sources */,
 				5FF7D6711C80C800002157DB /* abstractfile.c in Sources */,
 				5FF7D6731C80C800002157DB /* img2.c in Sources */,
 				5FF7D6431C80B51B002157DB /* pwd2key.c in Sources */,
+				5FF7D7041C8149E6002157DB /* btree.c in Sources */,
 				5FF7D6CC1C80D4CF002157DB /* CBImageDecrypter.m in Sources */,
 				5FF7D6421C80B51B002157DB /* prng.c in Sources */,
 				5FF7D5DD1C80A782002157DB /* CBAppDelegate.m in Sources */,
 				5FF7D60A1C80A99C002157DB /* AFHTTPRequestOperationManager.m in Sources */,
+				5FF7D6E81C8148B5002157DB /* checksum.c in Sources */,
+				5FF7D7101C8149E6002157DB /* xattr.c in Sources */,
 				5FF7D60D1C80A99C002157DB /* AFSecurityPolicy.m in Sources */,
 				5FF7D6781C80C800002157DB /* lzssfile.c in Sources */,
 				5FF7D63D1C80B51B002157DB /* aeskey.c in Sources */,
+				5FF7D7051C8149E6002157DB /* catalog.c in Sources */,
 				5FF7D6461C80B51B002157DB /* ioapi.c in Sources */,
+				5FF7D6EF1C8148B5002157DB /* partition.c in Sources */,
 				5FF7D6441C80B51B002157DB /* sha1.c in Sources */,
+				5FF7D70B1C8149E6002157DB /* hfscompress.c in Sources */,
 				5FF7D5DF1C80A782002157DB /* CBFirmwareDownloader.m in Sources */,
 				5FF7D5DE1C80A782002157DB /* CBDeviceInfo.m in Sources */,
 				5FF7D63C1C80B51B002157DB /* aescrypt.c in Sources */,
