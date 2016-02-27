@@ -77,6 +77,7 @@
 		5FF7D70E1C8149E6002157DB /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7011C8149E6002157DB /* utility.c */; };
 		5FF7D70F1C8149E6002157DB /* volume.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7021C8149E6002157DB /* volume.c */; };
 		5FF7D7101C8149E6002157DB /* xattr.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7031C8149E6002157DB /* xattr.c */; };
+		5FF7D7131C815BD6002157DB /* CBImageExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7121C815BD6002157DB /* CBImageExtractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -288,6 +289,8 @@
 		5FF7D7011C8149E6002157DB /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
 		5FF7D7021C8149E6002157DB /* volume.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = volume.c; sourceTree = "<group>"; };
 		5FF7D7031C8149E6002157DB /* xattr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xattr.c; sourceTree = "<group>"; };
+		5FF7D7111C815BD6002157DB /* CBImageExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBImageExtractor.h; sourceTree = "<group>"; };
+		5FF7D7121C815BD6002157DB /* CBImageExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBImageExtractor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +396,8 @@
 				5FF7D6CB1C80D4CF002157DB /* CBImageDecrypter.m */,
 				5FF7D6D11C80EFA5002157DB /* CBImagePatcher.h */,
 				5FF7D6D21C80EFA5002157DB /* CBImagePatcher.m */,
+				5FF7D7111C815BD6002157DB /* CBImageExtractor.h */,
+				5FF7D7121C815BD6002157DB /* CBImageExtractor.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 				5FF7D6741C80C800002157DB /* img3.c in Sources */,
 				5FF7D60F1C80A99C002157DB /* AFURLRequestSerialization.m in Sources */,
 				5FF7D63F1C80B51B002157DB /* entropy.c in Sources */,
+				5FF7D7131C815BD6002157DB /* CBImageExtractor.m in Sources */,
 				5FF7D70E1C8149E6002157DB /* utility.c in Sources */,
 				5FF7D70D1C8149E6002157DB /* rawfile.c in Sources */,
 				5FF7D5E01C80A782002157DB /* CBMainViewController.m in Sources */,

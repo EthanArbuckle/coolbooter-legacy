@@ -274,6 +274,8 @@ static inline void writeUInt64(AbstractFile* file, uint64_t data) {
 #ifdef __cplusplus
 extern "C" {
 #endif
+    int buildInOut(const char* source, const char* dest, AbstractFile** in, AbstractFile** out);
+    
 	void outResources(AbstractFile* file, AbstractFile* out);
 
 	uint32_t CRC32Checksum(uint32_t* crc, const unsigned char *buf, size_t len);

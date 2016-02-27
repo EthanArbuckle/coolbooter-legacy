@@ -1,13 +1,11 @@
-#ifndef FILEVAULT_H
-#define FILEVAULT_H
 
 #include <stdint.h>
 #include "dmg.h"
 
-#ifdef HAVE_CRYPT
+//#ifdef HAVE_CRYPT
 
-#include <openssl/hmac.h>
-#include <openssl/aes.h>
+#include "hmac.h"
+#include "aes.h"
 
 #define FILEVAULT_CIPHER_KEY_LENGTH	16
 #define FILEVAULT_CIPHER_BLOCKSIZE	16
@@ -91,8 +89,6 @@ typedef struct FileVaultInfo {
 	char		dirty;
 	char		headerDirty;
 } FileVaultInfo;
-#endif
 
 AbstractFile* createAbstractFileFromFileVault(AbstractFile* file, const char* key);
 
-#endif

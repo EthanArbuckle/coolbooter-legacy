@@ -12,6 +12,7 @@
 #import "SSZipArchive.h"
 #import "CBImageDecrypter.h"
 #import "CBImagePatcher.h"
+#import "CBImageExtractor.h"
 
 @interface CBMainViewController : UIViewController <CBFirmwareDownloaderDelegate>
 

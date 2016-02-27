@@ -6,11 +6,11 @@
 #include "filevault.h"
 #include <inttypes.h>
 
-#ifdef HAVE_CRYPT
+//#ifdef HAVE_CRYPT
 
-#include <openssl/hmac.h>
-#include <openssl/aes.h>
-#include <openssl/evp.h>
+#include "hmac.h"
+#include "aes.h"
+#include "evp.h"
 
 #define CHUNKNO(oft, info) ((uint32_t)((oft)/info->blockSize))
 #define CHUNKOFFSET(oft, info) ((size_t)((oft) - ((off_t)(CHUNKNO(oft, info)) * (off_t)info->blockSize)))
@@ -260,10 +260,10 @@ AbstractFile* createAbstractFileFromFileVault(AbstractFile* file, const char* ke
 	return toReturn;
 }
 
-#else
-
+//#else
+/*
 AbstractFile* createAbstractFileFromFileVault(AbstractFile* file, const char* key) {
 	return NULL;
 }
 
-#endif
+#endif */

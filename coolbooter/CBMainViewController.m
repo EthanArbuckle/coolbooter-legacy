@@ -58,7 +58,7 @@
 
 #pragma mark - unzipping
 - (void)beginUnzippingFirmware {
-
+    [self unzipOperationFinished];return;
     if (![[NSFileManager defaultManager] fileExistsAtPath:@"/Users/ethanarbuckle/Desktop/firmware_stuff/stock_firmware.zip"]) {
         
         NSLog(@"firmware file doesnt exist");
@@ -118,8 +118,12 @@
     NSLog(@"ibec...");
     [CBImageDecrypter decryptImageAtLocation:@"/Users/ethanarbuckle/Desktop/firmware_stuff/expanded_firmware/Firmware/dfu/iBEC.n92ap.RELEASE.dfu" key:@"6e8292914a5597610f7d76fdc25ee88ad5240c19591f071f4993cbdefa902019" iv:@"da1a960590726a66f23d6418602d6e63" toFile:@"/Users/ethanarbuckle/Desktop/firmware_stuff/dec.ibec.dfu"];
     
+    NSLog(@"applying patches");
     [CBImagePatcher applyPatchAtURL:@"http://localhost/iBEC.patch" toFile:@"/Users/ethanarbuckle/Desktop/firmware_stuff/dec.ibec.dfu" saveLocation:@"/Users/ethanarbuckle/Desktop/firmware_stuff/patched.dec.ibec.dfu"];
     [CBImagePatcher applyPatchAtURL:@"http://localhost/kern.patch" toFile:@"/Users/ethanarbuckle/Desktop/firmware_stuff/dec.kernelcache" saveLocation:@"/Users/ethanarbuckle/Desktop/firmware_stuff/patched.dec.kernelcache"];
+    
+    NSLog(@"decrypting rootfs");
+    [CBImageExtractor extractImage:@"/Users/ethanarbuckle/Desktop/firmware_stuff/expanded_firmware/048-2443-005.dmg" toPath:@"/Users/ethanarbuckle/Desktop/firmware_stuff/rootfs.dmg" withKey:@"3ad3f6163e6d6307f7149ae980df922725718f32f28554d8969cbdb92349e3c79de9b623"];
     
 }
 
