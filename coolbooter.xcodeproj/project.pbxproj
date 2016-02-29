@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F80540B1C84DA2D00805938 /* CBFirmwareProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F80540A1C84DA2D00805938 /* CBFirmwareProfile.m */; };
 		5FF7D5C01C80A75A002157DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D5BF1C80A75A002157DB /* main.m */; };
 		5FF7D5CB1C80A75A002157DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D5CA1C80A75A002157DB /* Assets.xcassets */; };
 		5FF7D5CE1C80A75A002157DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D5CC1C80A75A002157DB /* LaunchScreen.storyboard */; };
@@ -97,9 +98,12 @@
 		5FF7D78C1C81ED59002157DB /* parttypes.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7521C81ED59002157DB /* parttypes.cc */; };
 		5FF7D7921C81ED59002157DB /* support.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D7591C81ED59002157DB /* support.cc */; };
 		5FF7D7951C81EED8002157DB /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF7D7941C81EED8002157DB /* libncurses.5.4.tbd */; };
+		5FFE8A8A1C84B96B00E7964B /* CBOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE8A891C84B96B00E7964B /* CBOperationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F8054091C84DA2D00805938 /* CBFirmwareProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFirmwareProfile.h; sourceTree = "<group>"; };
+		5F80540A1C84DA2D00805938 /* CBFirmwareProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFirmwareProfile.m; sourceTree = "<group>"; };
 		5FF7D5BB1C80A75A002157DB /* coolbooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolbooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF7D5BF1C80A75A002157DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FF7D5CA1C80A75A002157DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -401,6 +405,8 @@
 		5FF7D7D01C826364002157DB /* termcap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = termcap.h; sourceTree = "<group>"; };
 		5FF7D7D11C826364002157DB /* tic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tic.h; sourceTree = "<group>"; };
 		5FF7D7D21C826364002157DB /* unctrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unctrl.h; sourceTree = "<group>"; };
+		5FFE8A881C84B96B00E7964B /* CBOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBOperationManager.h; sourceTree = "<group>"; };
+		5FFE8A891C84B96B00E7964B /* CBOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBOperationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +508,10 @@
 		5FF7D6121C80AFA2002157DB /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				5F8054091C84DA2D00805938 /* CBFirmwareProfile.h */,
+				5F80540A1C84DA2D00805938 /* CBFirmwareProfile.m */,
+				5FFE8A881C84B96B00E7964B /* CBOperationManager.h */,
+				5FFE8A891C84B96B00E7964B /* CBOperationManager.m */,
 				5FF7D5D71C80A782002157DB /* CBDeviceInfo.h */,
 				5FF7D5D81C80A782002157DB /* CBDeviceInfo.m */,
 				5FF7D5D91C80A782002157DB /* CBFirmwareDownloader.h */,
@@ -978,6 +988,7 @@
 				5FF7D6091C80A99C002157DB /* AFHTTPRequestOperation.m in Sources */,
 				5FF7D70C1C8149E6002157DB /* hfslib.c in Sources */,
 				5FF7D7071C8149E6002157DB /* extents.c in Sources */,
+				5F80540B1C84DA2D00805938 /* CBFirmwareProfile.m in Sources */,
 				5FF7D6EA1C8148B5002157DB /* dmg.c in Sources */,
 				5FF7D6481C80B51B002157DB /* unzip.c in Sources */,
 				5FF7D7731C81ED59002157DB /* gdisk.cc in Sources */,
@@ -1027,6 +1038,7 @@
 				5FF7D7801C81ED59002157DB /* guid.cc in Sources */,
 				5FF7D63D1C80B51B002157DB /* aeskey.c in Sources */,
 				5FF7D7051C8149E6002157DB /* catalog.c in Sources */,
+				5FFE8A8A1C84B96B00E7964B /* CBOperationManager.m in Sources */,
 				5FF7D6461C80B51B002157DB /* ioapi.c in Sources */,
 				5FF7D6EF1C8148B5002157DB /* partition.c in Sources */,
 				5FF7D6441C80B51B002157DB /* sha1.c in Sources */,
@@ -1200,6 +1212,7 @@
 				5FF7D5D41C80A75A002157DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

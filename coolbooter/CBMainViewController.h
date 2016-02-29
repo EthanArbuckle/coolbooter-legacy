@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CBDeviceInfo.h"
-#import "CBFirmwareDownloader.h"
-#import "SSZipArchive.h"
-#import "CBImageDecrypter.h"
-#import "CBImagePatcher.h"
-#import "CBImageExtractor.h"
+#import "CBOperationManager.h"
+#import "CBFirmwareProfile.h"
 
-@interface CBMainViewController : UIViewController <CBFirmwareDownloaderDelegate>
+@interface CBMainViewController : UIViewController
+
+@property (nonatomic, strong) CBOperationManager *manager;
 
 @end

@@ -31,7 +31,7 @@
     [operation setOutputStream:[NSOutputStream outputStreamToFileAtPath:fileLocation append:NO]];
     
     if (showProgress) {
-        NSLog(@"1 %@", _delegate);
+
         [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
 
             if (_delegate && [_delegate respondsToSelector:@selector(downloadProgressChanged:)]) {
@@ -42,14 +42,14 @@
     }
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
+
         if (_delegate && [_delegate respondsToSelector:@selector(downloadCompleted)]) {
             
             [_delegate downloadCompleted];
         }
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        
+
         if (_delegate && [_delegate respondsToSelector:@selector(downloadFailedWithError:)]) {
             
             [_delegate downloadFailedWithError:error];
