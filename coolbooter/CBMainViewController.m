@@ -42,6 +42,7 @@
         [currentProfile addObject:@{ @"pathLocation" : @"%@/firmware_stuff/expanded_firmware/Firmware/dfu/iBSS.n92ap.RELEASE.dfu", @"iv" : @"293cc706282984db11e1d4e44d9d5709", @"key" : @"a383c3055d8a6f5350226cb2af458e29aa38abda3672c38d8d63dfa1118988c8" } forSetting:@"iBSS"];
         
         _manager = [[CBOperationManager alloc] initWithProfile:currentProfile];
+                
         [_manager beginFresh];
         
     }
