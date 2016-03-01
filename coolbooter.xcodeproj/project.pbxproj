@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F80540B1C84DA2D00805938 /* CBFirmwareProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F80540A1C84DA2D00805938 /* CBFirmwareProfile.m */; };
+		5F80540E1C86094C00805938 /* dd.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F80540D1C86094C00805938 /* dd.c */; };
 		5FF7D5C01C80A75A002157DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF7D5BF1C80A75A002157DB /* main.m */; };
 		5FF7D5CB1C80A75A002157DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D5CA1C80A75A002157DB /* Assets.xcassets */; };
 		5FF7D5CE1C80A75A002157DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF7D5CC1C80A75A002157DB /* LaunchScreen.storyboard */; };
@@ -104,6 +105,8 @@
 /* Begin PBXFileReference section */
 		5F8054091C84DA2D00805938 /* CBFirmwareProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFirmwareProfile.h; sourceTree = "<group>"; };
 		5F80540A1C84DA2D00805938 /* CBFirmwareProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFirmwareProfile.m; sourceTree = "<group>"; };
+		5F80540D1C86094C00805938 /* dd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dd.c; sourceTree = "<group>"; };
+		5F80540F1C86098200805938 /* dd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dd.h; sourceTree = "<group>"; };
 		5FF7D5BB1C80A75A002157DB /* coolbooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolbooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF7D5BF1C80A75A002157DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FF7D5CA1C80A75A002157DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -426,6 +429,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F80540C1C86094C00805938 /* dd */ = {
+			isa = PBXGroup;
+			children = (
+				5F80540D1C86094C00805938 /* dd.c */,
+				5F80540F1C86098200805938 /* dd.h */,
+			);
+			path = dd;
+			sourceTree = "<group>";
+		};
 		5FF7D5B21C80A75A002157DB = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +462,7 @@
 		5FF7D5BD1C80A75A002157DB /* coolbooter */ = {
 			isa = PBXGroup;
 			children = (
+				5F80540C1C86094C00805938 /* dd */,
 				5FF7D7971C826364002157DB /* include */,
 				5FF7D7141C81ED59002157DB /* gptfdisk */,
 				5FF7D6D81C8148B5002157DB /* dmg */,
@@ -1050,6 +1063,7 @@
 				5FF7D5DE1C80A782002157DB /* CBDeviceInfo.m in Sources */,
 				5FF7D63C1C80B51B002157DB /* aescrypt.c in Sources */,
 				5FF7D7791C81ED59002157DB /* gptcl.cc in Sources */,
+				5F80540E1C86094C00805938 /* dd.c in Sources */,
 				5FF7D60B1C80A99C002157DB /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
