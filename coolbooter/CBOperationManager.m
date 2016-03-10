@@ -10,11 +10,12 @@
 
 @implementation CBOperationManager
 
-- (id)initWithProfile:(CBFirmwareProfile *)profile {
-    
+- (id)initWithProfile:(CBFirmwareProfile *)profile progressCallbacks:(CBMainViewController_ *)vc {
+
     if ((self = [super init])) {
         
         _firmwareProfile = profile;
+        _delegate = vc;
     }
     
     return self;
@@ -47,7 +48,9 @@
 
 #pragma mark FirmwareDownloader delegates
 - (void)downloadProgressChanged:(CGFloat)progress {
-    NSLog(@"progress %.2f%%", progress * 100);
+   // NSLog(@"progress %.2f%%", progress * 100);
+    [_delegate updateText:[NSString stringWithFormat:@"fetching firmware (%.2f)", progress*100]];
+    [_delegate updateProgress:progress];
 }
 
 - (void)downloadFailedWithError:(NSError *)error {
@@ -94,12 +97,20 @@
 }
 
 - (void)unzipProgressChanged:(CGFloat)progress {
-    NSLog(@"unzip progress %f", progress);
+    if (progress >= .95) {
+        [_delegate updateText:@"decrypting rootfs"];
+
+    } else
+        [_delegate updateText:[NSString stringWithFormat:@"decompressing firmware (%.2f)", progress*100]];
+    
+    [_delegate updateProgress:progress];
 }
 
 - (void)unzipOperationFinished {
     
+    
     NSLog(@"decrypting files");
+    [_delegate updateText:@"decrypting files"];
     
     NSLog(@"restore ramdisk...");
     [CBImageDecrypter decryptImageAtLocation:[NSString stringWithFormat:[_firmwareProfile retrieveSetting:@"restoreRamdisk"][@"pathLocation"], [_firmwareProfile retrieveSetting:@"tempFolder"]] key:[_firmwareProfile retrieveSetting:@"restoreRamdisk"][@"key"] iv:[_firmwareProfile retrieveSetting:@"restoreRamdisk"][@"iv"] toFile:[NSString stringWithFormat:@"%@/firmware_stuff/expanded_firmware/dec.restoreramdisk.dmg", [_firmwareProfile retrieveSetting:@"tempFolder"]]];
@@ -126,12 +137,16 @@
     [CBImageDecrypter decryptImageAtLocation:[NSString stringWithFormat:[_firmwareProfile retrieveSetting:@"iBSS"][@"pathLocation"], [_firmwareProfile retrieveSetting:@"tempFolder"]] key:[_firmwareProfile retrieveSetting:@"iBSS"][@"key"] iv:[_firmwareProfile retrieveSetting:@"iBSS"][@"iv"] toFile:[NSString stringWithFormat:@"%@/firmware_stuff/dec.ibss.dfu", [_firmwareProfile retrieveSetting:@"tempFolder"]]];
     
     NSLog(@"applying patches");
+    
     [CBImagePatcher applyPatchAtURL:[_firmwareProfile retrieveSetting:@"iBECPatchURL"] toFile:[NSString stringWithFormat:@"%@/firmware_stuff/dec.ibec.dfu", [_firmwareProfile retrieveSetting:@"tempFolder"]] saveLocation:[NSString stringWithFormat:@"%@/firmware_stuff/patched.dec.ibec.dfu", [_firmwareProfile retrieveSetting:@"tempFolder"]]];
     [CBImagePatcher applyPatchAtURL:[_firmwareProfile retrieveSetting:@"kernelPatchURL"] toFile:[NSString stringWithFormat:@"%@/firmware_stuff/dec.kernelcache", [_firmwareProfile retrieveSetting:@"tempFolder"]] saveLocation:[NSString stringWithFormat:@"%@/firmware_stuff/patched.dec.kernelcache", [_firmwareProfile retrieveSetting:@"tempFolder"]]];
     
     NSLog(@"decrypting rootfs");
-    [CBImageExtractor extractImage:[NSString stringWithFormat:[_firmwareProfile retrieveSetting:@"rootfs"][@"pathLocation"], [_firmwareProfile retrieveSetting:@"tempFolder"]] toPath:[NSString stringWithFormat:@"%@/firmware_stuff/rootfs.dmg", [_firmwareProfile retrieveSetting:@"tempFolder"]] withKey:[_firmwareProfile retrieveSetting:@"rootfs"][@"key"]];
     
+    [CBImageExtractor extractImage:[NSString stringWithFormat:[_firmwareProfile retrieveSetting:@"rootfs"][@"pathLocation"], [_firmwareProfile retrieveSetting:@"tempFolder"]] toPath:[NSString stringWithFormat:@"%@/firmware_stuff/rootfs.dmg", [_firmwareProfile retrieveSetting:@"tempFolder"]] withKey:[_firmwareProfile retrieveSetting:@"rootfs"][@"key"]];
+    [_delegate updateText:@"done"];
+    
+    [_delegate createButton];
 }
 
 @end

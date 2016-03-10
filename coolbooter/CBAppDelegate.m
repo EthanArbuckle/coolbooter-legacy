@@ -6,6 +6,7 @@
     
 	_window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	_rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CBMainViewController alloc] init]];
+    [_rootViewController setNavigationBarHidden:YES];
     [_window setRootViewController:_rootViewController];
 	[_window makeKeyAndVisible];
     

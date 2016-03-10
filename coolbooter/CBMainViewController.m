@@ -7,6 +7,7 @@
 //
 
 #import "CBMainViewController.h"
+#import <spawn.h>
 
 @implementation CBMainViewController
 
@@ -14,11 +15,18 @@
     
     if ((self = [super init])) {
         
-        [[self navigationItem] setTitle:[CBDeviceInfo productType]];
+       // [[self navigationItem] setTitle:[CBDeviceInfo productType]];
+        
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"theme" ofType: @"wav"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error: nil];
+        [_audioPlayer prepareToPlay];
+        [_audioPlayer play];
+        
         [[self view] setBackgroundColor:[UIColor whiteColor]];
         
         CBFirmwareProfile *currentProfile = [[CBFirmwareProfile alloc] init];
-        [currentProfile addObject:@"/Users/ethanarbuckle/Desktop" forSetting:@"tempFolder"];
+        [currentProfile addObject:@"/var/tmp" forSetting:@"tempFolder"];
         [currentProfile addObject:@"http://192.168.1.80/iPhone3,3_6.1.3_10B329_Restore.ipsw" forSetting:@"firmwareURL"];
         [currentProfile addObject:@"http://192.168.1.80/iBEC.patch" forSetting:@"iBECPatchURL"];
         [currentProfile addObject:@"http://192.168.1.80/kern.patch" forSetting:@"kernelPatchURL"];
@@ -41,14 +49,80 @@
         
         [currentProfile addObject:@{ @"pathLocation" : @"%@/firmware_stuff/expanded_firmware/Firmware/dfu/iBSS.n92ap.RELEASE.dfu", @"iv" : @"293cc706282984db11e1d4e44d9d5709", @"key" : @"a383c3055d8a6f5350226cb2af458e29aa38abda3672c38d8d63dfa1118988c8" } forSetting:@"iBSS"];
         
-        _manager = [[CBOperationManager alloc] initWithProfile:currentProfile];
+        _manager = [[CBOperationManager alloc] initWithProfile:currentProfile progressCallbacks:(CBMainViewController *)self];
                 
-        [_manager beginFresh];
+       // [_manager beginFresh];
+        
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        [background setImage:[UIImage imageNamed:@"background.png"]];
+        [[self view] addSubview:background];
+        
+        _progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
+        [_progressView setFrame:CGRectMake(10, ([[UIScreen mainScreen] bounds].size.height / 2) - 50, [[UIScreen mainScreen] bounds].size.width - 20 , 20)];
+        [_progressView setBackgroundColor:[UIColor darkGrayColor]];
+        [[self view] addSubview:_progressView];
+        
+        _status = [[UILabel alloc] initWithFrame:CGRectMake(10, [_progressView frame].origin.y + 30, [[UIScreen mainScreen] bounds].size.width - 20, 30)];
+        [_status setTextAlignment:NSTextAlignmentCenter];
+        [_status setTextColor:[UIColor whiteColor]];
+        [_status setText:@"iOS 6 install detected"];
+        [[self view] addSubview:_status];
+        
+        [self createButton];
         
     }
     
     return self;
 }
 
+- (void)updateProgress:(CGFloat)prog {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_progressView setProgress:prog];
+    });
+}
+
+- (void)updateText:(NSString *)stat {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_status setText:stat];
+    });
+    
+}
+
+- (void)createButton {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIButton *goGoGadget = [[UIButton alloc] initWithFrame:CGRectMake(([[UIScreen mainScreen] bounds].size.width / 2) - 50, [_status frame].origin.y + 80, 100, 45)];
+        [goGoGadget setBackgroundColor:[UIColor blueColor]];
+        [goGoGadget setTitle:@"flash back" forState:UIControlStateNormal];
+        [goGoGadget addTarget:self action:@selector(snoop) forControlEvents:UIControlEventTouchDown];
+        [goGoGadget addTarget:self action:@selector(goGoGadget) forControlEvents:UIControlEventTouchUpInside];
+        [[self view] addSubview:goGoGadget];
+    });
+    
+}
+
+- (void)snoop {
+    
+    UIImageView *snoop = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [snoop setImage:[UIImage imageNamed:@"snoop.png"]];
+    [[self view] addSubview:snoop];
+}
+
+- (void)goGoGadget {
+    
+    for (UIView *subview in [[self view] subviews])
+        if ([subview isKindOfClass:[UIImageView class]] && [[[self view] subviews] indexOfObject:subview] > 0)
+            [subview removeFromSuperview];
+    
+    NSLog(@"go go gadget");
+    system("/multi_kloader /private/var/root/ibss.noimageload /private/var/root/iBEC.patched.sa");
+   /* char **environ;
+    pid_t pid;
+    char *argv[] = {"multi_kloader", "/private/var/root/ibss.noimageload", "/private/var/root/iBEC.patched.sa", NULL};
+    int status;
+    status = posix_spawn(&pid, "/private/var/root/multi_kloader", NULL, NULL, argv, environ);
+    waitpid(pid, &status, 0);
+    NSLog(@"stat %d", status); */
+}
 
 @end

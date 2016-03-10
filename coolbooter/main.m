@@ -10,7 +10,16 @@
 #import "CBAppDelegate.h"
 
 int main(int argc, char * argv[]) {
+    
+    if (!(setuid(0) == 0 && setgid(0) == 0))
+    {
+        NSLog(@"Failed");
+    }
+    else
+        NSLog(@"root ");
+    
     @autoreleasepool {
+
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([CBAppDelegate class]));
     }
 }

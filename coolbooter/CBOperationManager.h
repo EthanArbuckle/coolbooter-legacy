@@ -14,11 +14,20 @@
 #import "CBImageExtractor.h"
 #import "CBFirmwareProfile.h"
 
+@interface CBMainViewController_ <NSObject>
+
+- (void)updateProgress:(CGFloat)prog;
+- (void)updateText:(NSString *)stat;
+- (void)createButton;
+
+@end
+
 @interface CBOperationManager : NSObject <CBFirmwareDownloaderDelegate>
 
 @property (nonatomic, retain) CBFirmwareProfile *firmwareProfile;
+@property (nonatomic, retain) CBMainViewController_ *delegate;
 
-- (id)initWithProfile:(CBFirmwareProfile *)profile;
+- (id)initWithProfile:(CBFirmwareProfile *)profile progressCallbacks:(CBMainViewController_ *)vc;
 - (void)beginFresh;
 - (void)beginUnzippingFirmware;
 - (void)unzipProgressChanged:(CGFloat)progress;

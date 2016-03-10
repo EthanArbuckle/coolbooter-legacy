@@ -10,9 +10,13 @@
 #import "CBDeviceInfo.h"
 #import "CBOperationManager.h"
 #import "CBFirmwareProfile.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface CBMainViewController : UIViewController
 
 @property (nonatomic, strong) CBOperationManager *manager;
+@property (nonatomic, retain) UIProgressView *progressView;
+@property (nonatomic, retain) UILabel *status;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
